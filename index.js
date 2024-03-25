@@ -1,4 +1,5 @@
 const { ApolloServer } = require("apollo-server");
+import { ApolloServerPluginLandingPageLocalDefault, ApolloServerPluginLandingPageProductionDefault } from '@apollo/server/plugin/landingPage/default';
 const mongoose = require("mongoose");
 require("dotenv").config();
 const typeDefs = require("./graphql/typeDefs");
