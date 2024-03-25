@@ -16,7 +16,8 @@
     username
     createdAt
   }
-}```
+}
+```
 **Output:** An array of Post objects, each containing the post ID, body, username of the author, and the creation date.
 
 ### getPostsByUser
