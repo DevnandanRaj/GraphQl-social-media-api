@@ -1,7 +1,7 @@
 # GraphQl-social-media-api
-Queries
-getPosts
-Description: Fetches a list of all posts.
+#Queries
+#getPosts
+#Description: Fetches a list of all posts.
 Usage: Use this query to retrieve all posts available in the database.
 Input: None
 Output: An array of Post objects, each containing the post ID, body, username of the author, and the creation date.
