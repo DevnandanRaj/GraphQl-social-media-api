@@ -9,7 +9,7 @@
 **Usage:** Use this query to retrieve all posts available in the database.
 
 **Input:** None
-query {
+```query {
   getPosts {
     id
     body
