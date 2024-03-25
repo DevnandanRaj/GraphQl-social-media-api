@@ -9,7 +9,14 @@
 **Usage:** Use this query to retrieve all posts available in the database.
 
 **Input:** None
-
+query {
+  getPosts {
+    id
+    body
+    username
+    createdAt
+  }
+}
 **Output:** An array of Post objects, each containing the post ID, body, username of the author, and the creation date.
 
 ### getPostsByUser
@@ -84,13 +91,4 @@
 
 **Output:** The updated User object of the current user, including the newly followed user in the 'following' array.
 
-### unfollowUser
 
-**Description:** Allows a user to unfollow another user.
-
-**Usage:** Use this mutation to unfollow another user.
-
-**Input:**
-- username: The username of the user to unfollow.
-
-**Output:** The updated User object of the current user, excluding the unfollowed user from the 'following' array.
