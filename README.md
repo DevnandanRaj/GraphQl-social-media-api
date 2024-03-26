@@ -44,7 +44,18 @@
 - email: The email address of the new user.
 - password: The password for the new user.
 - confirmPassword: Confirmation of the password for validation.
+```mutation{
+  register (registerInput: {
+    username: "dev2"
+    password: "124"
+    confirmPassword: "124"
+    email: "dev2@gamil.com"
+  }){
+    id
 
+  }
+}
+```
 **Output:** A User object containing the user's ID, email, username, token, and creation date.
 
 ### login
