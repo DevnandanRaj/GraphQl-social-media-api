@@ -28,7 +28,15 @@
 
 **Input:**
 - username: The username of the user whose posts you want to fetch.
-
+```query GetPostsByUser($username: String!) {
+  getPostsByUser(username: $username) {
+    id
+    body
+    username
+    createdAt
+  }
+}
+```
 **Output:** An array of Post objects authored by the specified user.
 
 ## **Mutations**
@@ -67,7 +75,13 @@
 **Input:**
 - username: The username of the user attempting to log in.
 - password: The password of the user attempting to log in.
-
+```mutation($username: String!, $password: String!){
+  login(username: $username, password: $password) {
+    id
+    token
+  }
+}
+```
 **Output:** A User object containing the user's ID, email, username, token, and creation date upon successful authentication.
 
 ### createPost
@@ -78,7 +92,15 @@
 
 **Input:**
 - body: The content/body of the post.
-
+```mutation($body: String!, $postId: ID!){
+  createPost(body: $body) {
+  id
+  body
+  username
+  createdAt
+  }
+}
+```
 **Output:** A Post object containing the ID, body, username of the author, and creation date of the new post.
 
 ### deletePost
@@ -89,7 +111,10 @@
 
 **Input:**
 - postId: The ID of the post to be deleted.
-
+```mutation($postId: ID!){
+  deletePost(postId: $postId)
+}
+```
 **Output:** A confirmation message indicating the successful deletion of the post.
 
 ### followUser
@@ -100,7 +125,14 @@
 
 **Input:**
 - username: The username of the user to follow.
-
+```mutation($username: String!){
+  followUser(username: $username) {
+    following {
+      id
+    }
+  }
+}
+```
 **Output:** The updated User object of the current user, including the newly followed user in the 'following' array.
 
 
